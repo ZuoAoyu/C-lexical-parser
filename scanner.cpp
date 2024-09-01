@@ -21,16 +21,18 @@ std::string Scanner::readFile(std::filesystem::path filepath) {
 }
 
 void Scanner::parse() {
+  long lastline {-1};
+
   while (true) {
     Token token{nextToken()};
 
-    if (token.line != m_line) {
-      std::cout << token.line << ' ';
-      m_line = token.line;
+    if (token.line != lastline) {
+      std::cout << token.line << "    ";
+      lastline = token.line;
     } else {
       std::cout << "   | ";
     }
-    std::cout << std::setw(2) << static_cast<int>(token.type) << " '"
+    std::cout << std::setw(2) << STR[token.type] << " '"
               << m_source.substr(token.start, token.length) << "'\n";
 
     if (token.type == TokenType::EOF_) {
