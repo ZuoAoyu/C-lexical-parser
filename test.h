@@ -6,6 +6,7 @@
 class Test {
 public:
   static void testSkipWhiteSpaces();
+  static void testReadFile();
 };
 
 #endif

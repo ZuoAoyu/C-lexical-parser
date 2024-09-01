@@ -12,10 +12,10 @@ int main(int argc, char *argv[]) {
   fs::path src_file{argv[1]};
   Scanner scanner{src_file};
 
-  // {
-  //   // 测试文件读取是否正常
-  //   std::cout << scanner.getSource();
-  // }
+  {
+    // 测试 文件读取
+    Test::testReadFile();
+  }
 
   {
     // 测试 跳过空白符
