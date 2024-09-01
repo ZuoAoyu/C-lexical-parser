@@ -22,5 +22,7 @@ int main(int argc, char *argv[]) {
     Test::testSkipWhiteSpaces();
   }
 
+  scanner.parse();
+
   return 0;
 }
