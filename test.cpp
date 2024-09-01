@@ -1,4 +1,5 @@
 #include "test.h"
+#include "scanner.h"
 #include <iostream>
 
 void Test::testSkipWhiteSpaces() {
